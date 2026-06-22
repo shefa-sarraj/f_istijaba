@@ -1,0 +1,167 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@font-face {
+  font-family: 'lion';
+  src: url(assets/font/arfonts-lyon-arabic-display_all/lyon-arabic-display-regular.otf) format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'lion';
+  src: url(assets/font/arfonts-lyon-arabic-display_all/lyon-arabic-display-medium.otf) format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'lion';
+  src: url(assets/font/arfonts-lyon-arabic-display_all/lyon-arabic-display-bold.otf) format('opentype');
+  font-weight: 700;
+}
+
+/* القالب */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120vh;
+  background-color: #346186; 
+  direction: rtl; 
+}
+
+.auth-card {
+  background-color: #ffffff;
+  padding: 40px 40px; 
+  border-radius: 12px;
+  width: 100%;
+  max-width: 650px; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 3);
+
+}
+
+
+
+
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-logo {
+  width: 300px; 
+  height: auto; 
+  object-fit: contain;
+  padding: 0;
+}
+
+
+.success {
+  width: 250px; 
+  height: auto;
+}
+
+
+
+
+
+/* تنسيق الحقل الرماد */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  width: 100%;
+  margin-bottom: 20px; 
+}
+
+/* تنسيق ال label*/
+.input-label {
+  font-family: lion;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+
+
+
+/* تنسيق حقل الإدخال الرمادي الفاتح المريح */
+.custom-input {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: #e0e0e0; 
+  border: 2px solid transparent; /* الحدود شفافة افتراضياً */
+  border-radius: 4px; 
+  outline: none;
+}
+
+.custom-input:focus {
+  background-color: #ffffff; 
+  border-color: #82c4f9; 
+}
+
+
+
+
+
+
+
+
+
+
+/* تنسيق الزر الأزرق */
+.primary-btn {
+  width: 100%; 
+  padding: 16px;
+  border-radius: 4px; 
+  font-family: lion;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 16px;
+  margin-bottom: 15px;
+}
+
+.primary-btn:hover {
+  background-color: #91bbde; 
+}
+
+
+.primary-btn:active {
+  transform: scale(0.95); 
+}
+
+
+
+
+
+
+
+
+/* تنسيق عنوان الكارد الرئيسي */
+.auth-title {
+  color: #346186;
+  margin-bottom: 8px;
+  font-family: lion;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* تنسيق النص الفرعي الترحيبي */
+.auth-subtitle {
+  color: #346186;
+  font-family: lion;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 24px;
+}

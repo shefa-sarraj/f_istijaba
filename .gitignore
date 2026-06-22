@@ -1,0 +1,46 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# 1. المجلد الأهم والأضخم (مكتبات المشروع)
+node_modules/
+
+# 2. مجلدات بناء المشروع وتجهيزه للإنتاج (Production Build)
+dist/
+dist-ssr/
+*.local
+
+# 3. ملفات البيئة المتغيرة (التي تحتوي على أسرار أو روابط الـ API الخاصة بكِ)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 4. ملفات النظام وسجلات الأخطاء (Logs)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.DS_Store
+Thumbs.db
