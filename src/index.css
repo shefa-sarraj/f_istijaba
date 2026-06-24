@@ -165,3 +165,143 @@
   text-align: center;
   margin-bottom: 24px;
 }
+
+
+
+/* الحاوية الرئيسية للصفحة */
+.profile-page-container {
+  direction: rtl;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding-bottom: 40px;
+  font-family: sans-serif;
+}
+
+/* البانر العلوي التموجي */
+.profile-banner {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  background-size: cover;
+  background-position: center;
+}
+
+/* الحاوية المركزية للكرت */
+.profile-content-wrapper {
+  max-width: 600px;
+  margin: -60px auto 0 auto;
+  padding: 0 20px;
+}
+
+/* عنوان الصفحة والوصف */
+.profile-title-section {
+  margin-bottom: 24px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.profile-title-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+}
+
+.profile-title-section p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* الكرت الرئيسي الأزرق الفاتح الحاضن */
+.profile-main-card {
+  background-color: #dbeafe; /* الأزرق السماوي المعتمد بتصميمك */
+  border-radius: 20px;
+  padding: 30px 24px 24px 24px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+/* قسم الصورة الشخصية الدائرية */
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* زر الكاميرا الصغير */
+.camera-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  alignItems: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+}
+
+/* صندوق الترقية ذو الحدود المنقطة */
+.upgrade-box-container {
+  border: 2px dashed #b5c7d3;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  margin-top: 24px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.02);
+}
+
+.upgrade-box-container h5 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+
+.upgrade-box-container p {
+  margin: 0 0 16px 0;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.upgrade-btn-wrapper {
+  max-width: 160px;
+  margin: 0 auto;
+}
+
+/* تنسيق إضافي للأيقونات داخل الحقول لتبدو متناسقة */
+.input-with-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.field-icon {
+  position: absolute;
+  left: 12px; /* لتثبيت الأيقونة على اليسار لكي لا تتداخل مع النص العربي اليميني */
+  color: #8fa0af;
+  font-size: 18px;
+}

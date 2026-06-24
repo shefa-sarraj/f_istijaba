@@ -1,13 +1,8 @@
 import React from 'react';
-
 import CustomInput from '../components/CustomInput';
-
 import PrimaryButton from '../components/PrimaryButton';
-
 import { Link, useNavigate } from 'react-router-dom';
-
 import logo from '../assets/logo.png';
-
 import { useState } from 'react';
 
 
