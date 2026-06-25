@@ -254,7 +254,7 @@
   width: 28px;
   height: 28px;
   display: flex;
-  alignItems: center;
+  align-items: center;
   justify-content: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.15);
   cursor: pointer;
