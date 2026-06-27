@@ -1,6 +1,7 @@
 import React from 'react';
 import CustomInput from '../components/CustomInput';
 import PrimaryButton from '../components/PrimaryButton';
+import ECG from "../components/ECG";
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png'; 
 import { useState , useEffect} from 'react';
@@ -47,17 +48,17 @@ function Login() {
   return (
     <div className="auth-card">
       <div className="logo-container">
-        <img src={logo} alt="شعار منصة إستجابة" className="app-logo" />
+        <ECG />
       </div>
 
-      <h4 className="auth-title" >مرحبا بك في منصة إستجابة</h4>
+      <h4 className="auth-title" >تسجيل الدخول</h4>
       <h6 className="auth-subtitle" >
-اهلا بك , سجل دخولك للوصول الى الحملات و الاحتياجات المجتمعية. </h6>
+سجّل دخولك لنتابع معاً تنظيم وتوجيه المساعدات للأسر الأكثر استحقاقاً </h6>
 
     <form onSubmit={handleLogin} noValidate>
         
         <CustomInput 
-          label="البريد الإلكتروني" 
+          label="اسم المؤسسة" 
           type="email" 
           placeholder="r@gmail.com" 
           value={email}
@@ -75,7 +76,7 @@ function Login() {
 
         <div style={{display: 'flex',justifyContent: 'space-between',alignItems: 'center',width: '100%',marginBottom: '24px',marginTop: '4px',direction: 'rtl'}}>
         
-          <label>
+          <label >
             <input 
               type="checkbox" 
               checked={rememberMe}
@@ -85,22 +86,12 @@ function Login() {
           </label>
 
           <Link to="/forgotPass" style={{color: '#346186',fontSize: '13px',textDecoration: 'none',fontWeight: '600',margin: 0,lineHeight: '1'}}>
-            نسيت كلمة المرور؟ 
+           هل نسيت كلمة المرور؟
           </Link>
         </div>
         
         <PrimaryButton text="تسجيل الدخول" type="submit" />
       </form>
-
-      <p className="auth-subtitle" style={{ fontSize: '1rem', color: '#000000', marginTop: '8px', textAlign: 'center'}}>
-       {     } ليس لديكِ حساب؟
-        <Link
-       to="/register"
-       style={{ color: '#346186', textDecoration: 'none', fontWeight: 'bold' }}
-        >
-       إنشاء حساب    
-        </Link>
-      </p>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CustomInput from '../components/CustomInput';
 import PrimaryButton from '../components/PrimaryButton';
+import ECG from "../components/ECG";
 import logo from '../assets/logo.png'; 
 import success from '../assets/success.png'; 
 
@@ -15,7 +16,7 @@ function popupLogin() {
   return (
     <div className="auth-card">
           <div className="logo-container">
-            <img src={logo} alt="شعار منصة إستجابة" className="app-logo" />
+                  <ECG />
           </div>
 
           <div className="logo-container">
@@ -25,14 +26,11 @@ function popupLogin() {
           <h4 className="auth-title" style={{marginBottom:"20px"}} >تم تسجيل الدخول بنجاح</h4>
         
       <p className="auth-subtitle"  >
-       أهلاً بك في استجابة تم تسجيل دخولك بنجاح <br />
-        نحن هنا لمساعدتك و متابعة طلباتك و تلبية احتياجاتك بكل سهولة 
-      </p>
+       دعنا نوجّه الدعم اليوم لمن ينتظرنا في الميدان      </p>
 
       
 
         <PrimaryButton text="الذهاب الى الصفحة الرئيسية" type="button" />
-        <PrimaryButton text="الذهاب الى الصفحة الرئيسية" type="button" color="#346186" backgroundColor="#ffffff" border='2px solid #346186' />
 
 
     </div>

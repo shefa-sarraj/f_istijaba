@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import CustomInput from '../components/CustomInput';
 import PrimaryButton from '../components/PrimaryButton';
+import ECG from "../components/ECG";
 import logo from '../assets/logo.png'; 
 
 function ForgotPassword() {
@@ -22,14 +23,13 @@ function ForgotPassword() {
   return (
     <div className="auth-card">
           <div className="logo-container">
-            <img src={logo} alt="شعار منصة إستجابة" className="app-logo" />
+            <ECG />
           </div>
     
           <h4 className="auth-title" style={{marginBottom:"20px"}} >نسيت كلمة المرور؟</h4>
         
       <p className="auth-subtitle"  >
-        أدخل بريدك الإلكتروني المرتبط بحسابك<br />
-        وسنرسل لك رابطاً لإعادة تعيين كلمة المرور
+        أدخل البريد الإلكتروني المرتبط بحساب مؤسستك، وسنرسل لك رابطاً آمناً لتغيير كلمة المرور.<br />
       </p>
 
       <form onSubmit={handleSendLink}>
@@ -48,8 +48,8 @@ function ForgotPassword() {
       </form>
 
       <div style={{ marginTop: '8px', textAlign: 'center' }}>
-        <Link to="/login" className="auth-subtitle"  style={{ textDecoration: 'none' , fontSize:"1rem" , color:"#000000"}}>
-          العودة الى صفحة <span style={{ color: '#346186' }}>تسجيل الدخول</span>
+        <Link to="/login" className="auth-ex"  style={{ textDecoration: 'none' , fontSize:"1rem" , color:"#000000"}}>
+        <span style={{ color: '#000000' }}>  العودة الى صفحة </span><span style={{ color: '#346186' }}>تسجيل الدخول</span>
         </Link>
       </div>
     </div>
