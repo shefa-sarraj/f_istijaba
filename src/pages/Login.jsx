@@ -59,6 +59,7 @@ function Login() {
         
         <CustomInput 
           label="اسم المؤسسة" 
+          required={true}
           type="email" 
           placeholder="r@gmail.com" 
           value={email}

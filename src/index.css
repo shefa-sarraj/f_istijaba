@@ -90,6 +90,13 @@
 }
 
 
+.required-star {
+  color: #dc3545;
+  margin-right: 4px; /* لأن الصفحة بالعربي */
+  font-size: 1rem;
+}
+
+
 
 
 /* تنسيق حقل الإدخال الرمادي الفاتح المريح */
@@ -314,4 +321,190 @@
   left: 12px; /* لتثبيت الأيقونة على اليسار لكي لا تتداخل مع النص العربي اليميني */
   color: #8fa0af;
   font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+/* تنسيق صفحة البلاغات*/
+
+
+/* الحاوية الرئيسية */
+.report-page {
+  direction: rtl;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+  font-family: inherit;
+  padding-bottom: 60px;
+}
+
+/* البانر العلوي */
+.report-banner {
+  background: linear-gradient(rgba(10, 37, 64, 0.75), rgba(10, 37, 64, 0.85)), url('../assets/banner-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.report-banner h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.report-banner h1 span {
+  color: #f15a24; /* اللون البرتقالي لكلمة بلاغ والاستجابة */
+}
+
+.report-banner p {
+  font-size: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+/* كرت الفورم الرئيسي */
+.form-container {
+  max-width: 850px;
+  margin: -30px auto 0 auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* شريط عنوان الأقسام */
+.section-divider {
+  background-color: #e0f2fe;
+  color: #1e3a8a;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin: 30px 0 20px 0;
+  font-size: 16px;
+}
+
+.section-divider:first-of-type {
+  margin-top: 0;
+}
+
+/* شبكة توزيع الحقول (Grid) */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* حاوية الحقل الفردي */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-group label {
+  font-weight: 600;
+  color: #334155;
+  font-size: 14px;
+}
+
+.field-group label span {
+  color: #dc2626; /* النجمة الحمراء للإلزامي */
+}
+
+/* ستايل المدخلات الأساسية والقوائم */
+.base-input, .base-select, .base-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  background-color: #ffffff;
+  font-size: 14px;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.base-input:focus, .base-select:focus, .base-textarea:focus {
+  border-color: #346186;
+}
+
+/* مكوّن عداد الأرقام الخاص */
+.counter-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 45px;
+}
+
+.counter-btn {
+  width: 50px;
+  height: 100%;
+  background-color: #e2e8f0;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #334155;
+  transition: background-color 0.2s;
+}
+
+.counter-btn:hover {
+  background-color: #cbd5e1;
+}
+
+.counter-value {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #1e293b;
+}
+
+/* أزرار التحكم بالأسفل */
+.actions-wrapper {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.btn-submit {
+  flex: 2;
+  background-color: #062444; /* كحلي داكن حسب التصميم */
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  flex: 1;
+  background-color: #e0f2fe;
+  color: #346186;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
 }
