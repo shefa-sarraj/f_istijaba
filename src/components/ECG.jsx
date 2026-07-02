@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import logo from '../assets/logo.png'; 
 
 
-export default function LogoHeartbeatOverlay() {
+export default function ECG() {
   const logoPath= "M 15 109 L 40 109 L 48 93 L 56 129 L 66 57 L 80 149 L 90 95 L 99 109 L 125 109";
 
   return (

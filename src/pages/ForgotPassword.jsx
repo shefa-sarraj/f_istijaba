@@ -6,6 +6,7 @@ import CustomInput from '../components/CustomInput';
 import PrimaryButton from '../components/PrimaryButton';
 import ECG from "../components/ECG";
 import logo from '../assets/logo.png'; 
+import { handleBackendForgotPassword } from '../services/authService';
 
 function ForgotPassword() {
 
@@ -15,21 +16,36 @@ function ForgotPassword() {
       email: ''
     });
 
+  const [loading, setLoading] = useState(false); 
+  const [success, setSuccess] = useState('');    
+
   const handleSendLink = (e) => {
-    e.preventDefault();
-    alert('تم إرسال رابط إعادة تعيين كلمة المرور إلى بريدكِ الإلكتروني.');
-  };
+  e.preventDefault();
+  setSuccess(''); 
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email.trim()) {
+    setErrors({ email: 'يجب الإدخال الإلزامي للبريد الإلكتروني' });
+    return;
+  } else if (!emailRegex.test(email)) {
+    setErrors({ email: 'البريد الإلكتروني غير صالح' });
+    return;
+  }
+
+  handleBackendForgotPassword({ email, setLoading, setErrors, setSuccess });
+};
 
   return (
     <div className="auth-card">
           <div className="logo-container">
-            <ECG />
+              <ECG  />
           </div>
     
           <h4 className="auth-title" style={{marginBottom:"20px"}} >نسيت كلمة المرور؟</h4>
         
       <p className="auth-subtitle"  >
-        أدخل البريد الإلكتروني المرتبط بحساب مؤسستك، وسنرسل لك رابطاً آمناً لتغيير كلمة المرور.<br />
+        أدخل بريدك الإلكتروني المرتبط بحسابك<br />
+        وسنرسل لك رابطاً لإعادة تعيين كلمة المرور
       </p>
 
       <form onSubmit={handleSendLink}>
@@ -48,8 +64,8 @@ function ForgotPassword() {
       </form>
 
       <div style={{ marginTop: '8px', textAlign: 'center' }}>
-        <Link to="/login" className="auth-ex"  style={{ textDecoration: 'none' , fontSize:"1rem" , color:"#000000"}}>
-        <span style={{ color: '#000000' }}>  العودة الى صفحة </span><span style={{ color: '#346186' }}>تسجيل الدخول</span>
+        <Link to="/login" className="auth-subtitle"  style={{ textDecoration: 'none' , fontSize:"1rem" , color:"#000000"}}>
+          العودة الى صفحة <span style={{ color: '#346186' }}>تسجيل الدخول</span>
         </Link>
       </div>
     </div>

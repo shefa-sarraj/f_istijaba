@@ -30,7 +30,7 @@
   justify-content: center;
   align-items: center;
   min-height: 120vh;
-  background-color: #17354f; 
+  background-color: #12293c; 
   direction: rtl; 
 }
 
@@ -57,6 +57,7 @@
 .app-logo {
   width: 300px; 
   height: auto; 
+  object-fit: contain;
   padding: 0;
 }
 
@@ -102,19 +103,17 @@
 /* تنسيق حقل الإدخال الرمادي الفاتح المريح */
 .custom-input {
   width: 100%;
-  height: 50px;
-  padding: 0 20px;
+  padding: 14px 16px;
   background-color: #e0e0e0; 
+  box-shadow: 0 4px 10px rgba(139, 185, 240, 0.5);
   border: 2px solid transparent; /* الحدود شفافة افتراضياً */
   border-radius: 4px; 
   outline: none;
-  box-shadow: 0 4px 14px rgba(172, 172, 172, 0.5);
-
 }
 
 .custom-input:focus {
   background-color: #ffffff; 
-  border-color: #17354f; 
+  border-color: #12293c; 
 }
 
 
@@ -129,15 +128,15 @@
 /* تنسيق الزر الأزرق */
 .primary-btn {
   width: 100%; 
-  height: 50px;
+  padding: 16px;
   border-radius: 4px; 
   font-family: lion;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   cursor: pointer;
   margin-top: 16px;
   margin-bottom: 15px;
-  box-shadow: 0 4px 14px rgba(87, 153, 207, 0.5);
+  box-shadow: 0 4px 10px rgba(139, 185, 240, 0.5);
 }
 
 .primary-btn:hover {
@@ -158,353 +157,20 @@
 
 /* تنسيق عنوان الكارد الرئيسي */
 .auth-title {
-  color: #17354f;
+  color: #12293c;
+  margin-bottom: 8px;
   font-family: lion;
   font-size: 1.7rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 8px;
-
 }
 
 /* تنسيق النص الفرعي الترحيبي */
 .auth-subtitle {
-  color: #000000;
+  color: #12293c;
   font-family: lion;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   text-align: center;
-  margin-bottom: 40px;
-}
-
-.auth-ex {
-  font-family: lion;
-  font-size: 0.8rem;
-  font-weight: 400;
-}
-
-
-
-/* الحاوية الرئيسية للصفحة */
-.profile-page-container {
-  direction: rtl;
-  background-color: #f8fafc;
-  min-height: 100vh;
-  padding-bottom: 40px;
-  font-family: sans-serif;
-}
-
-/* البانر العلوي التموجي */
-.profile-banner {
-  width: 100%;
-  height: 180px;
-  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
-  background-size: cover;
-  background-position: center;
-}
-
-/* الحاوية المركزية للكرت */
-.profile-content-wrapper {
-  max-width: 600px;
-  margin: -60px auto 0 auto;
-  padding: 0 20px;
-}
-
-/* عنوان الصفحة والوصف */
-.profile-title-section {
   margin-bottom: 24px;
-  text-align: right;
-  padding-right: 10px;
-}
-
-.profile-title-section h2 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #17354f;
-  margin: 0 0 4px 0;
-}
-
-.profile-title-section p {
-  font-size: 14px;
-  color: #64748b;
-  margin: 0;
-}
-
-/* الكرت الرئيسي الأزرق الفاتح الحاضن */
-.profile-main-card {
-  background-color: #dbeafe; /* الأزرق السماوي المعتمد بتصميمك */
-  border-radius: 20px;
-  padding: 30px 24px 24px 24px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-  position: relative;
-}
-
-/* قسم الصورة الشخصية الدائرية */
-.avatar-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 24px;
-}
-
-.avatar-wrapper {
-  position: relative;
-  width: 100px;
-  height: 100px;
-}
-
-.avatar-image {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #ffffff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-/* زر الكاميرا الصغير */
-.camera-badge {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: #ffffff;
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-  cursor: pointer;
-  font-size: 14px;
-  border: none;
-}
-
-/* صندوق الترقية ذو الحدود المنقطة */
-.upgrade-box-container {
-  border: 2px dashed #b5c7d3;
-  border-radius: 12px;
-  padding: 20px;
-  background-color: #ffffff;
-  text-align: center;
-  margin-top: 24px;
-  box-shadow: 0px 2px 4px rgba(0,0,0,0.02);
-}
-
-.upgrade-box-container h5 {
-  margin: 0 0 8px 0;
-  font-size: 16px;
-  color: #333;
-  font-weight: bold;
-}
-
-.upgrade-box-container p {
-  margin: 0 0 16px 0;
-  font-size: 13px;
-  color: #666;
-  line-height: 1.6;
-}
-
-.upgrade-btn-wrapper {
-  max-width: 160px;
-  margin: 0 auto;
-}
-
-/* تنسيق إضافي للأيقونات داخل الحقول لتبدو متناسقة */
-.input-with-icon-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.field-icon {
-  position: absolute;
-  left: 12px; /* لتثبيت الأيقونة على اليسار لكي لا تتداخل مع النص العربي اليميني */
-  color: #8fa0af;
-  font-size: 18px;
-}
-
-
-
-
-
-
-
-
-
-/* تنسيق صفحة البلاغات*/
-
-
-/* الحاوية الرئيسية */
-.report-page {
-  direction: rtl;
-  background-color: #f4f6f9;
-  min-height: 100vh;
-  font-family: inherit;
-  padding-bottom: 60px;
-}
-
-/* البانر العلوي */
-.report-banner {
-  background: linear-gradient(rgba(10, 37, 64, 0.75), rgba(10, 37, 64, 0.85)), url('../assets/banner-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.report-banner h1 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-
-.report-banner h1 span {
-  color: #f15a24; /* اللون البرتقالي لكلمة بلاغ والاستجابة */
-}
-
-.report-banner p {
-  font-size: 15px;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-  color: #e2e8f0;
-}
-
-/* كرت الفورم الرئيسي */
-.form-container {
-  max-width: 850px;
-  margin: -30px auto 0 auto;
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-}
-
-/* شريط عنوان الأقسام */
-.section-divider {
-  background-color: #e0f2fe;
-  color: #1e3a8a;
-  font-weight: bold;
-  padding: 10px 16px;
-  border-radius: 6px;
-  margin: 30px 0 20px 0;
-  font-size: 16px;
-}
-
-.section-divider:first-of-type {
-  margin-top: 0;
-}
-
-/* شبكة توزيع الحقول (Grid) */
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-@media (max-width: 768px) {
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* حاوية الحقل الفردي */
-.field-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.field-group label {
-  font-weight: 600;
-  color: #334155;
-  font-size: 14px;
-}
-
-.field-group label span {
-  color: #dc2626; /* النجمة الحمراء للإلزامي */
-}
-
-/* ستايل المدخلات الأساسية والقوائم */
-.base-input, .base-select, .base-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  outline: none;
-  background-color: #ffffff;
-  font-size: 14px;
-  transition: border-color 0.2s;
-  box-sizing: border-box;
-}
-
-.base-input:focus, .base-select:focus, .base-textarea:focus {
-  border-color: #346186;
-}
-
-/* مكوّن عداد الأرقام الخاص */
-.counter-wrapper {
-  display: flex;
-  align-items: center;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  overflow: hidden;
-  height: 45px;
-}
-
-.counter-btn {
-  width: 50px;
-  height: 100%;
-  background-color: #e2e8f0;
-  border: none;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #334155;
-  transition: background-color 0.2s;
-}
-
-.counter-btn:hover {
-  background-color: #cbd5e1;
-}
-
-.counter-value {
-  flex: 1;
-  text-align: center;
-  font-weight: bold;
-  font-size: 16px;
-  color: #1e293b;
-}
-
-/* أزرار التحكم بالأسفل */
-.actions-wrapper {
-  display: flex;
-  gap: 16px;
-  margin-top: 40px;
-}
-
-.btn-submit {
-  flex: 2;
-  background-color: #062444; /* كحلي داكن حسب التصميم */
-  color: white;
-  border: none;
-  padding: 14px;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.btn-cancel {
-  flex: 1;
-  background-color: #e0f2fe;
-  color: #346186;
-  border: none;
-  padding: 14px;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
 }

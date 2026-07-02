@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PrimaryButton({ text, onClick, type = 'button' ,color="#ffffff" , backgroundColor="#17354f" ,border="2px solid transparent"}) {
+function PrimaryButton({ text, onClick, type = 'button' ,color="#ffffff" , backgroundColor="#12293c" ,border="none"}) {
   return (
     <button
       className='primary-btn'

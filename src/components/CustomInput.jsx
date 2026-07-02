@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CustomInput({ label,required = false, type = 'text', placeholder, value, onChange, error, ...rest }) {
+function CustomInput({ label, type = 'text', placeholder, value, onChange,required, error, ...rest }) {
   return (
     <div className="input-group">
       {label && <label className="input-label">{label} {required && <span className="required-star">*</span>}</label>}

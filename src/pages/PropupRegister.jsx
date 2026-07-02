@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import CustomInput from '../components/CustomInput';
 import PrimaryButton from '../components/PrimaryButton';
 import ECG from "../components/ECG";
-
 import logo from '../assets/logo.png'; 
 import success from '../assets/success.png'; 
 
@@ -27,13 +26,13 @@ function popupLogin() {
           <h4 className="auth-title" style={{marginBottom:"20px"}} >تم تسجيل الدخول بنجاح</h4>
         
       <p className="auth-subtitle"  >
-       أهلاً بك في استجابة تم تسجيل دخولك بنجاح <br />
-        نحن هنا لمساعدتك و متابعة طلباتك و تلبية احتياجاتك بكل سهولة 
+        تم انشاء حسابك بنجاح ولكن يلزم تفعيل الحساب قبل تسجيل الدخول <br />
+      لقد أرسلنا رابط التفعيل الى بريدك الالكتروني . يرجى التحقق من البريد الوارد      
       </p>
 
       
 
-        <PrimaryButton text="الذهاب الى الصفحة الرئيسية" type="button" />
+        <PrimaryButton text="ا" type="button" />
         <PrimaryButton text="الذهاب الى الصفحة الرئيسية" type="button" color="#346186" backgroundColor="#ffffff" border='2px solid #346186' />
 
 
