@@ -6,13 +6,17 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import ForgotPassword from './pages/ForgotPassword'; 
 import PopupLogin from './pages/popupLogin';
+import Home from "./pages/Home";
+import Form from './pages/form';
+import Dashboard from './pages/Dashboard';
+
 
 
 
 function App() {
 
     return (
-      <div className="auth-container">
+      <div >
         <Routes>
           <Route path="/" element={<Login/>} />
           <Route path="/login" element={<Login/>} />
@@ -20,6 +24,12 @@ function App() {
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/forgotPass" element={<ForgotPassword/>} />
           <Route path="/PopupLogin" element={<PopupLogin/>} />
+          <Route path="/home" element={<Home/>} />
+          <Route path="/form" element={<Form/>} />
+          <Route path="/dashboard" element={<Dashboard/>} />
+
+
+
         </Routes>
     </div>
     );

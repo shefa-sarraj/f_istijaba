@@ -3,8 +3,9 @@ import CustomInput from '../components/CustomInput';
 import PrimaryButton from '../components/PrimaryButton';
 import ECG from "../components/ECG";
 import { Link, useNavigate } from 'react-router-dom';
+import { div } from 'framer-motion/client';
 // استدعاء دالة الربط النظيفة من السيرفيس
-import { handleBackendLogin } from '../services/authService'; 
+// import { handleBackendLogin } from '../services/authService'; 
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -38,7 +39,8 @@ function Login() {
   };
 
   return (
-    <div className="auth-card">
+    <div className="auth-container">
+    <div className="auth-card"  >
       <div className="logo-container">
         <ECG />
       </div>
@@ -84,6 +86,7 @@ function Login() {
         ليس لديكِ حساب؟
         <Link to="/register" style={{ color: '#346186', textDecoration: 'none', fontWeight: 'bold' }}> إنشاء حساب </Link>
       </p>
+    </div>
     </div>
   );
 }

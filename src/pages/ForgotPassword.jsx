@@ -6,7 +6,7 @@ import CustomInput from '../components/CustomInput';
 import PrimaryButton from '../components/PrimaryButton';
 import ECG from "../components/ECG";
 import logo from '../assets/logo.png'; 
-import { handleBackendForgotPassword } from '../services/authService';
+// import { handleBackendForgotPassword } from "../services/authService";
 
 function ForgotPassword() {
 
@@ -36,7 +36,8 @@ function ForgotPassword() {
 };
 
   return (
-    <div className="auth-card">
+    <div className="auth-container">
+    <div className="auth-card" className="auth-container">
           <div className="logo-container">
               <ECG  />
           </div>
@@ -68,6 +69,7 @@ function ForgotPassword() {
           العودة الى صفحة <span style={{ color: '#346186' }}>تسجيل الدخول</span>
         </Link>
       </div>
+    </div>
     </div>
   );
 }

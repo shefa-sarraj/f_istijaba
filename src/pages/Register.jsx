@@ -4,7 +4,7 @@ import PrimaryButton from '../components/PrimaryButton';
 import { Link, useNavigate } from 'react-router-dom';
 import ECG from "../components/ECG";
 // استدعاء دالة الربط النظيفة من السيرفيس
-import { handleBackendRegister } from '../services/authService';
+// import { handleBackendRegister } from '../services/authService';
 
 function Register() {
   const navigate = useNavigate();
@@ -60,7 +60,9 @@ function Register() {
   };
 
   return (
-    <div className="auth-card">
+    <div className="auth-container">
+
+    <div className="auth-card" className="auth-container">
       <div className="logo-container">
         <ECG />
       </div>
@@ -124,6 +126,7 @@ function Register() {
         لديكِ حساب ؟{' '}
         <Link to="/login" style={{color: '#346186', textDecoration: 'none'}}> تسجيل الدخول </Link>
       </p>
+    </div>
     </div>
   );
 }

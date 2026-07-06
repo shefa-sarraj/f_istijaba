@@ -5,7 +5,7 @@ import ECG from "../components/ECG";
 import { Link, useNavigate } from 'react-router-dom'; // 💡 تم إضافة useNavigate هنا
 import logo from '../assets/logo.png'; 
 // 1. استدعاء الدالة من السيرفيس
-import { handleBackendResetPassword } from '../services/authService'; 
+// import { handleBackendResetPassword } from '../services/authService'; 
 
 function ResetPassword() {
   const navigate = useNavigate();
@@ -66,7 +66,9 @@ function ResetPassword() {
   };
 
   return (
-    <div className="auth-card">
+    <div className="auth-container">
+
+    <div className="auth-card" >
       <div className="logo-container">
         <ECG />
       </div>
@@ -121,6 +123,8 @@ function ResetPassword() {
         </Link>
       </div>
     </div>
+    </div>
+
   );
 }
 
